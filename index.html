@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Colossos del Cielo</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="escarapela.png" href="escarapela.ico"/>
+  </head>
+
+  <body>
+
+      <header>
+
+      </header>
+
+      <section>
+
+      </section>
+    <script>
+    var header = document.querySelector('header');
+    var section = document.querySelector('section');
+    var request = new XMLHttpRequest();
+    request.open('GET','leagueoflegends.json');
+    request.send();
+    request.onload = function() {
+      var leagueoflegendsTexto = request.response;
+      var leagueoflegends = JSON.parse(leagueoflegendsTexto);
+      populateHeader(leagueoflegends);
+      MostrarCampeones(leagueoflegends);
+    }
+    function populateHeader(jsonObj) {
+      var myH1 = document.createElement('h1');
+      myH1.textContent = jsonObj['Universo'];
+      header.appendChild(myH1);
+      var myPara = document.createElement('p');
+      myPara.textContent = 'Presentando: ' + jsonObj['Subtitulo'];
+      header.appendChild(myPara);
+    }
+    function MostrarCampeones(jsonObj) {
+      var campeones = jsonObj['campeones'];
+      for(var i = 0; i < campeones.length; i++) {
+        var myArticle = document.createElement('article');
+        var myH2 = document.createElement('h2');
+        var imagen = document.createElement('img')
+        var myPara1 = document.createElement('p');
+        var myPara2 = document.createElement('p');
+        var myPara3 = document.createElement('p');
+        var myList = document.createElement('ul');
+
+        myH2.textContent = campeones[i].nombre;
+        imagen.src = campeones[i].urlImagen;
+        imagen.width = "200";
+        myPara1.textContent = 'Carga: ' + campeones[i].Carga;
+        myPara2.textContent = 'Distancia de Vuelo: ' + campeones[i].Distancia_Vuelo;
+        myPara3.textContent = 'Usos:';
+        var Usos = campeones[i].Usos;
+
+        for(var j = 0; j < Usos.length; j++) {
+          var listItem = document.createElement('li');
+          listItem.textContent = Usos[j];
+          myList.appendChild(listItem);
+        }
+
+        myArticle.appendChild(myH2);
+        myArticle.appendChild(imagen);
+        myArticle.appendChild(myPara1);
+        myArticle.appendChild(myPara2);
+        myArticle.appendChild(myPara3);
+        myArticle.appendChild(myList);
+        section.appendChild(myArticle);
+      }
+    }
+
+    </script>
+
+  </body>
+</html>
