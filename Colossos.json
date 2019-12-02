@@ -1,0 +1,75 @@
+{
+  "Universo" : "COLOSSOS DEL CIELO",
+  "Subtitulo" : "Aviones, helicopteros y más....",
+  "active" : true,
+  "campeones" : [
+    {
+      "nombre" : "Hercules",
+      "urlImagen":"Hercules.jpeg",
+      "Distancia_Vuelo" : "3.500 Km",
+      "Carga" : "30.000 Kg",
+      "Usos" : [
+        "Transporte",
+        "Recarga aérea",
+        "Bombardero"
+      ]
+    },
+    {
+      "nombre" : "MIG-23",
+      "urlImagen":"MIG-23.jpeg",
+      "Distancia_Vuelo" : "9000 Km",
+      "Carga" : "700 Kg",
+      "Usos" : [
+        "Ataque con misiles",
+        "Reconocimiento",
+        "Entrenamiento"
+      ]
+    },
+    {
+      "nombre" : "MQ-4",
+      "urlImagen":"MQ-4.jpeg",
+      "Distancia_Vuelo" : "4000 Km",
+      "Carga" : "150 Kg",
+      "Usos" : [
+        "Ataque con misil (único)",
+        "Reconocimiento",
+        "Epionaje"
+      ]
+    },
+    {
+      "nombre" : "Dirigible",
+      "urlImagen":"dirigible.jpg",
+      "Distancia_Vuelo" : "20000 Km",
+      "Carga" : "450000 Kg",
+      "Usos" : [
+        "Bombardero",
+        "Transporte",
+        "Propaganda"
+      ]
+    },
+    {
+      "nombre" : "Avión Stealth",
+      "urlImagen":"stealth.jpg",
+      "Distancia_Vuelo" : "28.000 Km",
+      "Carga" : "18.000 Kg",
+      "Usos" : [
+        "Espionaje",
+        "Bombardero",
+        "Ataque con misil",
+        "Anti-Radar"
+      ]
+    },
+    {
+      "nombre" : "helicoptero",
+      "urlImagen":"helicoptero.jpg",
+      "Distancia_Vuelo" : "1.200 Km",
+      "Carga" : "10.600 Kg",
+      "Usos" : [
+        "Emergencia médica",
+        "Busqueda",
+        "Ataque aereo ligero"
+      ]
+    }
+
+  ]
+}
